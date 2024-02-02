@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="nav-right">
+      <h1><a href="{% url 'home' %}">To Do</a></h1>
+    </div>
+    <div class="nav-left">
+      <a href="{% url 'task_new' %}" style="text-decoration: none; color: rgba(102, 51, 153, 0.653);"> Add Task</a>
+    
+      
+    </div>
+  </header>
+  <div>
+    {% block content %}
+    {% endblock content %}
+  </div>
+</body>
+</html>

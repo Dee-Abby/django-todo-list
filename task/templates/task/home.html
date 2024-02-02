@@ -1,0 +1,18 @@
+{% extends 'task/main.html' %}
+
+{% block content %}
+
+{% for task in task_list %}
+  <div class="task-preview">
+    <ul>
+      <li>
+        <h4><a href="{% url 'task_detail' task.pk %}">{{ task.title }}</a></h4>
+        <small>{{ task.date_created  }}</small>
+
+      </li>
+    </ul>
+  </div>
+{% endfor %}
+
+
+{% endblock content%}

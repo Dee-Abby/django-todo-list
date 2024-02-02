@@ -1,0 +1,13 @@
+{% extends 'task/main.html' %}
+
+{% block content %}
+  <div class="task-entry">
+    <h3>{{ object.title }}</h3>
+    <p>{{ object.description }}</p>
+  </div>
+
+  <p style="margin-top: 60px ; font-style: italic;">
+    your todo is missing something? <a href="{% url 'task_update' task.pk %}">Edit Here</a>
+  </p>
+  <p><a href="{% url 'task_delete' task.pk %}">Delete Task</a></p>
+{% endblock content %}
